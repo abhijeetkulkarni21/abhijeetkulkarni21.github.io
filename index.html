@@ -1,133 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhijeet Kulkarni | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      color: #ddd;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #444;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhijeet Kulkarni</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <nav class="max-w-5xl mx-auto p-6 flex items-center justify-between">
+    <div class="text-xl font-semibold">
+      <span id="greeting" class="animate-blink"></span>
+    </div>
+    <div class="space-x-4 text-sm">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#highlights" class="hover:underline">Highlights</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#resume" class="hover:underline">Resume</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </nav>  <header class="max-w-5xl mx-auto text-center py-20">
+    <h1 class="text-4xl font-bold">Abhijeet Kulkarni</h1>
+    <p class="mt-4 text-lg text-gray-700">Second-year Mechanical Engineering student at SGGS Nanded. Focus: Robotics, Aerospace Applications, Software Development, and AI Applications.</p>
+  </header>  <section id="snapshot" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Snapshot</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>College:</strong> Shri Guru Gobind Singhji Institute of Engineering and Technology Nanded</li>
+      <li><strong>Year:</strong> Second Year</li>
+      <li><strong>Interests:</strong> Robotics, Aerospace Applications, Software Development, AI Applications</li>
+      <li><strong>Availability:</strong> Open to Internships and Project Collaboration</li>
+    </ul>
+  </section>  <section id="about" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-700 mb-6">
+      I am a second-year Mechanical Engineering student at SGGS Nanded with interests in robotics, aerospace applications, and intelligent programming. I enjoy designing prototype robots, developing control systems, and integrating software with hardware. With experience in C, C++, and Python, I apply programming not only to embedded projects but also to problem-solving and web development. My goal is to connect core engineering principles with computational methods to create practical and efficient solutions.
+    </p>
+  </section>  <section id="highlights" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Highlights</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Organized <strong>national-level robotics event “R-Mageddon”</strong> as part of Robotics Club SGGS.</li>
+      <li>Built working prototypes:
+        <ul class="list-disc pl-6">
+          <li><strong>Line Follower Robot</strong> – 3rd place in intra-college competition.</li>
+          <li><strong>Object Detecting Grass-Cutting Robot</strong> – showcased at exhibition.</li>
+          <li><strong>Maze Solver</strong> and <strong>Hexapod Robots</strong>.</li>
+          <li><strong>Stirling Engine</strong> project for thermodynamics exploration.</li>
+        </ul>
+      </li>
+      <li>Active learner of <strong>Python programming</strong> – HackerRank practice, calculator project, backend basics.</li>
+    </ul>
+  </section>  <section id="skills" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Skills at a Glance</h2>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <li class="bg-white p-4 rounded shadow">Arduino, Sensors & Actuators</li>
+      <li class="bg-white p-4 rounded shadow">CAD Basics</li>
+      <li class="bg-white p-4 rounded shadow">Thermodynamics Models</li>
+      <li class="bg-white p-4 rounded shadow">Python</li>
+      <li class="bg-white p-4 rounded shadow">C / C++</li>
+      <li class="bg-white p-4 rounded shadow">Team Collaboration & Event Organization</li>
+    </ul>
+  </section>  <section id="interests" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Personal Interests</h2>
+    <p class="text-gray-700">Playing guitar and exploring music. Fitness and gym training. Curious about the intersection of <strong>Indian Knowledge Systems (Vedic Mathematics)</strong> with modern problem-solving.</p>
+  </section>  <section id="resume" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Resume / CV</h2>
+    <p><a href="cv.pdf" target="_blank" class="text-blue-600 hover:underline">Download My CV</a></p>
+  </section>  <section id="contact" class="max-w-5xl mx-auto py-12">
+    <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+    <p>Email: <a href="mailto:abhijeetkulkarni2006@gmail.com" class="text-blue-600 hover:underline">abhijeetkulkarni2006@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank" class="text-blue-600 hover:underline">My LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/" target="_blank" class="text-blue-600 hover:underline">My GitHub</a></p>
+  </section>  <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+    <p>© 2025 Abhijeet Kulkarni</p>
+  </footer>  <style>
     @keyframes blink { 50% { opacity: 0; } }
     .animate-blink { animation: blink 1s step-start infinite; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1><span id="greeting" class="animate-blink"></span></h1>
-    <p>Abhijeet Kulkarni | Second-year Mechanical Engineering student at SGGS Nanded<br>Focus: Robotics, Aerospace, Software, and AI Applications</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>Snapshot</h2>
-      <ul>
-        <li><strong>College:</strong> Shri Guru Gobind Singhji Institute of Engineering and Technology, Nanded</li>
-        <li><strong>Year:</strong> Second Year</li>
-        <li><strong>Interests:</strong> Robotics, Aerospace Applications, Software Development, AI Applications</li>
-        <li><strong>Availability:</strong> Open to Internships and Project Collaboration</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a second-year Mechanical Engineering student at SGGS Nanded with interests in robotics, embedded systems, and intelligent programming. 
-        I enjoy designing prototype robots, developing control systems, and integrating software with hardware. 
-        With experience in C, C++, and Python, I apply programming not only to embedded projects but also to problem-solving and basic web development. 
-        My goal is to connect core engineering principles with computational methods to create practical and efficient solutions.
-      </p>
-      <h3>Relevant Coursework & Skills</h3>
-      <ul>
-        <li>Thermodynamics, applied physics, and mechanical systems design</li>
-        <li>C, C++, and Python programming; basic web development</li>
-        <li>Arduino Nano and embedded programming</li>
-      </ul>
-      <h3>Clubs & Roles</h3>
-      <ul>
-        <li>Active member and project contributor, RNXG Robotics Club</li>
-        <li>Organiser for intra-college robotics events and workshops</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills at a Glance</h2>
-      <ul>
-        <li><strong>Design & Robotics:</strong> AutoCAD, Robotics & Automation</li>
-        <li><strong>Programming:</strong> C, C++, Python</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Resume / CV</h2>
-      <p><a href="cv.pdf" target="_blank">Download My CV</a></p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:abhijeetkulkarni2006@gmail.com">abhijeetkulkarni2006@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank">My LinkedIn</a></p>
-      <p>GitHub: <a href="https://github.com/abhijeetkulkarni21" target="_blank">My GitHub</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Abhijeet Kulkarni</p>
-  </footer>
-
-  <script>
+  </style>  <script>
     const greetings = ["नमस्ते", "Hello", "Bonjour", "こんにちは", "Hola", "Guten Tag"];
     let i = 0;
     const el = document.getElementById("greeting");
@@ -137,6 +83,5 @@
     }
     changeGreeting();
     setInterval(changeGreeting, 2000);
-  </script>
-</body>
+  </script></body>
 </html>
