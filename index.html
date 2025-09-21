@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhijeet Kulkarni — Engineering Student | Robotics & Embedded Systems</title>
-  <meta name="description" content="Abhijeet Kulkarni — Second-year Mechanical Engineering student at SGGS Nanded. Projects: line follower robot, object-detecting grass cutter, Stirling engine exhibit. Skills: AutoCAD, Robotics, C, C++, Python." />
+  <title>Abhi — Engineering Student | Robotics & Embedded Systems</title>
+  <meta name="description" content="Abhi — Second-year Mechanical Engineering student at SGGS Nanded. Projects: line follower robot, object-detecting grass cutter, Stirling engine exhibit. Skills: Arduino, Python, Embedded Systems." />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
-  <!-- Navigation -->
+<body class="bg-gray-50 text-gray-800 leading-relaxed transition-colors duration-500" id="body">
+  <!-- Navbar -->
   <nav class="max-w-5xl mx-auto p-6 flex items-center justify-between">
     <div class="text-xl font-semibold">
-      <span id="greeting" class="transition-opacity duration-1000 ease-in-out"></span>
+      <span id="greeting"></span>
     </div>
-    <div class="space-x-4 text-sm">
+    <div class="flex items-center space-x-4 text-sm">
       <a href="#about" class="hover:underline">About</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#resume" class="hover:underline">Resume</a>
       <a href="#contact" class="hover:underline">Contact</a>
+      <!-- Dark mode toggle -->
+      <button id="darkToggle" class="ml-4 p-2 rounded border text-xs">🌙</button>
     </div>
   </nav>
 
@@ -25,14 +27,13 @@
   <header class="max-w-5xl mx-auto px-6 py-10">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h1 class="text-3xl md:text-4xl font-bold">Abhijeet Kulkarni</h1>
+        <h1 class="text-3xl md:text-4xl font-bold">Abhi</h1>
         <p class="mt-3 text-lg">Second-year Mechanical Engineering Student at SGGS Nanded. Focus: Robotics, Aerospace, Software, and AI Applications.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">AutoCAD</span>
-          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">Robotics & Automation</span>
-          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">C</span>
-          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">C++</span>
+          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">Arduino</span>
           <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">Python</span>
+          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">Embedded Systems</span>
+          <span class="px-3 py-1 bg-white rounded-md shadow-sm text-sm">Web Development</span>
         </div>
 
         <div class="mt-6 flex gap-3">
@@ -41,11 +42,10 @@
         </div>
       </div>
 
-      <!-- Snapshot -->
       <div class="bg-white rounded-2xl shadow-md p-6">
         <h3 class="font-semibold">Snapshot</h3>
         <ul class="mt-4 space-y-2 text-sm">
-          <li><strong>College</strong>: Shri Guru Gobind Singhji Institute of Engineering and Technology Nanded</li>
+          <li><strong>College</strong>: SGGS Nanded</li>
           <li><strong>Year</strong>: Second Year</li>
           <li><strong>Interests</strong>: Robotics, Aerospace Applications, Software Development, AI Applications</li>
           <li><strong>Availability</strong>: Open to internships and project collaborations</li>
@@ -54,59 +54,65 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- About -->
   <main class="max-w-5xl mx-auto px-6 pb-12">
-    <!-- About -->
     <section id="about" class="bg-white rounded-xl p-6 mb-8 shadow-sm">
       <h2 class="text-2xl font-semibold">About</h2>
       <p class="mt-3 text-sm">
-        I am a second-year Mechanical Engineering student at SGGS Nanded with interests in robotics, embedded systems, and intelligent programming. 
-        I enjoy designing prototype robots, developing control systems, and integrating software with hardware. 
-        With experience in C, C++, and Python, I apply programming not only to embedded projects but also to problem-solving and basic web development. 
-        My goal is to connect core engineering principles with computational methods to create practical and efficient solutions.
+        I am a second-year Mechanical Engineering student at SGGS Nanded with interests in robotics, embedded systems, and intelligent programming. I enjoy designing prototype robots, developing control systems, and integrating software with hardware. With experience in C, C++, and Python, I apply programming not only to embedded projects but also to problem-solving and basic web development. My goal is to connect core engineering principles with computational methods to create practical and efficient solutions.
       </p>
       <div class="mt-4 grid md:grid-cols-2 gap-4">
         <div>
           <h4 class="font-semibold">Relevant coursework & skills</h4>
           <ul class="mt-2 text-sm list-disc ml-5">
+            <li>Arduino Nano & embedded programming</li>
+            <li>C, C++, Python programming; basic web development</li>
             <li>Thermodynamics, applied physics, and mechanical systems design</li>
-            <li>C, C++, and Python programming; basic web development</li>
-            <li>Arduino Nano and embedded programming</li>
           </ul>
         </div>
         <div>
           <h4 class="font-semibold">Clubs & roles</h4>
           <ul class="mt-2 text-sm list-disc ml-5">
             <li>RNXG Robotics Club — active member and project contributor</li>
-            <li>Organiser for intra-college robotics events and workshops</li>
+            <li>Organiser for intra-college robotics events</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects with filter -->
     <section id="projects" class="mb-8">
       <h2 class="text-2xl font-semibold mb-4">Selected Projects</h2>
+
+      <!-- Filter Buttons -->
+      <div class="mb-6 space-x-3">
+        <button class="filter-btn px-3 py-1 bg-gray-200 rounded" data-category="all">All</button>
+        <button class="filter-btn px-3 py-1 bg-gray-200 rounded" data-category="Robotics">Robotics</button>
+        <button class="filter-btn px-3 py-1 bg-gray-200 rounded" data-category="Mechanical">Mechanical</button>
+        <button class="filter-btn px-3 py-1 bg-gray-200 rounded" data-category="Software">Software</button>
+        <button class="filter-btn px-3 py-1 bg-gray-200 rounded" data-category="AI">AI</button>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        <article class="bg-white rounded-lg p-5 shadow-sm">
+        <article class="project-card bg-white rounded-lg p-5 shadow-sm" data-category="Robotics">
           <h3 class="font-semibold">Line Follower Robot</h3>
           <p class="mt-2 text-sm">Team project. Placed third in intra-college competition. Designed sensor array and PID-style control logic for robust line tracking.</p>
           <p class="mt-2 text-xs text-gray-500">Tech: Arduino, IR sensors, DC motors, basic PID</p>
         </article>
 
-        <article class="bg-white rounded-lg p-5 shadow-sm">
+        <article class="project-card bg-white rounded-lg p-5 shadow-sm" data-category="Robotics Mechanical">
           <h3 class="font-semibold">Object-detecting Grass Cutting Robot</h3>
           <p class="mt-2 text-sm">Prototype showcased in an exhibition. Implemented obstacle detection and object detection to safely navigate a lawn area.</p>
           <p class="mt-2 text-xs text-gray-500">Tech: Embedded sensors, basic computer vision, motor control</p>
         </article>
 
-        <article class="bg-white rounded-lg p-5 shadow-sm">
+        <article class="project-card bg-white rounded-lg p-5 shadow-sm" data-category="Mechanical">
           <h3 class="font-semibold">Stirling Engine Project</h3>
           <p class="mt-2 text-sm">Demonstration project used to explain thermodynamics principles. Focused on efficiency and working cycle understanding.</p>
           <p class="mt-2 text-xs text-gray-500">Tech: Mechanical prototype, thermodynamics analysis</p>
         </article>
 
-        <article class="bg-white rounded-lg p-5 shadow-sm">
+        <article class="project-card bg-white rounded-lg p-5 shadow-sm" data-category="Robotics Software">
           <h3 class="font-semibold">Arduino Nano Teaching Module</h3>
           <p class="mt-2 text-sm">Prepared materials and demos to teach Arduino Nano fundamentals to first-year students.</p>
           <p class="mt-2 text-xs text-gray-500">Tech: Arduino, sample circuits, documentation</p>
@@ -115,23 +121,18 @@
     </section>
 
     <!-- Resume -->
-   <section id="resume" class="bg-white rounded-xl p-6 mb-8 shadow-sm">
-  <h2 class="text-2xl font-semibold">Resume & Links</h2>
-  <p class="mt-3 text-sm">You can preview my resume below or download it directly. Also connect via GitHub and LinkedIn.</p>
-  
-  <!-- Resume Preview -->
-  <div class="mt-4">
-    <iframe src="resume.pdf" class="w-full h-96 border rounded-md shadow-sm"></iframe>
-  </div>
-
-  <!-- Links -->
-  <div class="mt-4 flex flex-wrap gap-3">
-    <a href="resume.pdf" class="px-4 py-2 bg-gray-800 text-white rounded-md text-sm">Download Resume</a>
-    <a href="https://github.com/abhijeetkulkarni21" target="_blank" class="px-4 py-2 border border-gray-300 rounded-md text-sm">GitHub</a>
-    <a href="https://www.linkedin.com/in/abhijeet-kulkarni-43016b326/" target="_blank" class="px-4 py-2 border border-gray-300 rounded-md text-sm">LinkedIn</a>
-  </div>
-</section>
-
+    <section id="resume" class="bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <h2 class="text-2xl font-semibold">Resume & Links</h2>
+      <p class="mt-3 text-sm">You can preview my resume below or download it directly. Also connect via GitHub and LinkedIn.</p>
+      <div class="mt-4">
+        <iframe src="resume.pdf" class="w-full h-96 border rounded-md shadow-sm"></iframe>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="resume.pdf" class="px-4 py-2 bg-gray-800 text-white rounded-md text-sm">Download Resume</a>
+        <a href="https://github.com/abhijeetkulkarni21" target="_blank" class="px-4 py-2 border border-gray-300 rounded-md text-sm">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhijeet-kulkarni-43016b326/" target="_blank" class="px-4 py-2 border border-gray-300 rounded-md text-sm">LinkedIn</a>
+      </div>
+    </section>
 
     <!-- Contact -->
     <section id="contact" class="bg-white rounded-xl p-6 shadow-sm">
@@ -143,33 +144,73 @@
 
   <!-- Footer -->
   <footer class="max-w-5xl mx-auto px-6 py-6 text-xs text-center text-gray-500">
-    © <span id="year"></span> Abhijeet Kulkarni. Built for portfolio and academic use.
+    © <span id="year"></span> Abhi. Built for portfolio and academic use.
   </footer>
 
-  <!-- Greeting Animation Script -->
+  <!-- Scripts -->
   <script>
-    const greetings = ["नमस्ते", "Hello", "Bonjour", "こんにちは", "Hola", "Guten Tag"];
-    let i = 0;
-    const el = document.getElementById("greeting");
-
-    function changeGreeting() {
-      el.style.opacity = 0; // fade out
-      setTimeout(() => {
-        el.textContent = greetings[i];
-        el.style.opacity = 1; // fade in
-        i = (i + 1) % greetings.length;
-      }, 500);
-    }
-
-    // Initialize
-    el.textContent = greetings[0];
-    el.style.opacity = 1;
-
-    // Change every 2 seconds
-    setInterval(changeGreeting, 2000);
-
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typewriter effect
+    const greetings = ["नमस्ते", "Hello", "Bonjour", "こんにちは", "Hola", "Guten Tag"];
+    let gIndex = 0, charIndex = 0, typing = true;
+    const greetEl = document.getElementById("greeting");
+
+    function typeWriter() {
+      if (typing) {
+        if (charIndex < greetings[gIndex].length) {
+          greetEl.textContent += greetings[gIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 150);
+        } else {
+          typing = false;
+          setTimeout(typeWriter, 1000);
+        }
+      } else {
+        if (charIndex > 0) {
+          greetEl.textContent = greetings[gIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(typeWriter, 100);
+        } else {
+          typing = true;
+          gIndex = (gIndex + 1) % greetings.length;
+          setTimeout(typeWriter, 200);
+        }
+      }
+    }
+    typeWriter();
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    darkToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("bg-gray-50", "text-gray-800");
+        document.body.classList.add("bg-gray-900", "text-gray-100");
+        darkToggle.textContent = "☀️";
+      } else {
+        document.body.classList.remove("bg-gray-900", "text-gray-100");
+        document.body.classList.add("bg-gray-50", "text-gray-800");
+        darkToggle.textContent = "🌙";
+      }
+    });
+
+    // Project filter
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const category = btn.getAttribute("data-category");
+        projectCards.forEach(card => {
+          if (category === "all" || card.getAttribute("data-category").includes(category)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
